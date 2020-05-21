@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3229597-A473-4824-A9B0-77B963791007}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QL_KS</RootNamespace>
+    <AssemblyName>QL_KS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework">
+      <HintPath>C:\Users\NGUYỄNTHỊSONY\Desktop\metroframework-modern-ui-master\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>C:\Users\NGUYỄNTHỊSONY\Desktop\metroframework-modern-ui-master\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>C:\Users\NGUYỄNTHỊSONY\Desktop\metroframework-modern-ui-master\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ucHeThong\ucManHinhChinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucHeThong\ucManHinhChinh.Designer.cs">
+      <DependentUpon>ucManHinhChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucKhachHang\ucDangKy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucKhachHang\ucDangKy.Designer.cs">
+      <DependentUpon>ucDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucKhachHang\ucDangNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucKhachHang\ucDangNhap.Designer.cs">
+      <DependentUpon>ucDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucKhachHang\ucDatPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucKhachHang\ucDatPhong.Designer.cs">
+      <DependentUpon>ucDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucKhachHang\ucTimKiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucKhachHang\ucTimKiem.Designer.cs">
+      <DependentUpon>ucTimKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhanVien\Report\CrystalReportDTLoaiPhong.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportDTLoaiPhong.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ucNhanVien\Report\CrystalReportDTNam.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportDTNam.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ucNhanVien\Report\CrystalReportDTThang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportDTThang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ucNhanVien\Report\CrystalReportHoaDon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportHoaDon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ucNhanVien\Report\DataSetReport.cs">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhanVien\Report\DataSetReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhanVien\Report\ReportDTLoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucNhanVien\Report\ReportDTLoaiPhong.Designer.cs">
+      <DependentUpon>ReportDTLoaiPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhanVien\Report\ReportDTNam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucNhanVien\Report\ReportDTNam.Designer.cs">
+      <DependentUpon>ReportDTNam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhanVien\Report\ReportDTThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucNhanVien\Report\ReportDTThang.Designer.cs">
+      <DependentUpon>ReportDTThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhanVien\Report\ReportHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucNhanVien\Report\ReportHD.Designer.cs">
+      <DependentUpon>ReportHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhanVien\ucDangNhapNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNhanVien\ucDangNhapNV.Designer.cs">
+      <DependentUpon>ucDangNhapNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhanVien\NhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNhanVien\NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhanVien\ucHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNhanVien\ucHoaDon.Designer.cs">
+      <DependentUpon>ucHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhanVien\ucThongKeBaoCao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNhanVien\ucThongKeBaoCao.Designer.cs">
+      <DependentUpon>ucThongKeBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNhanVien\ucTinhTrangPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNhanVien\ucTinhTrangPhong.Designer.cs">
+      <DependentUpon>ucTinhTrangPhong.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucHeThong\ucManHinhChinh.resx">
+      <DependentUpon>ucManHinhChinh.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucKhachHang\ucDangKy.resx">
+      <DependentUpon>ucDangKy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucKhachHang\ucDangNhap.resx">
+      <DependentUpon>ucDangNhap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucKhachHang\ucDatPhong.resx">
+      <DependentUpon>ucDatPhong.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucKhachHang\ucTimKiem.resx">
+      <DependentUpon>ucTimKiem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhanVien\NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhanVien\Report\CrystalReportDTLoaiPhong.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportDTLoaiPhong.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhanVien\Report\CrystalReportDTNam.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportDTNam.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhanVien\Report\CrystalReportDTThang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportDTThang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhanVien\Report\CrystalReportHoaDon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportHoaDon.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhanVien\Report\ReportDTLoaiPhong.resx">
+      <DependentUpon>ReportDTLoaiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhanVien\Report\ReportHD.resx">
+      <DependentUpon>ReportHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhanVien\ucDangNhapNV.resx">
+      <DependentUpon>ucDangNhapNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhanVien\ucHoaDon.resx">
+      <DependentUpon>ucHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhanVien\ucThongKeBaoCao.resx">
+      <DependentUpon>ucThongKeBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNhanVien\ucTinhTrangPhong.resx">
+      <DependentUpon>ucTinhTrangPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ucNhanVien\Report\DataSetReport.xsc">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </None>
+    <None Include="ucNhanVien\Report\DataSetReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ucNhanVien\Report\DataSetReport.xss">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cropped-hotel-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tai_khoan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh_nen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh_minh_hoa3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh_minh_hoa1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hinh_minh_hoa2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%24this.Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NhanVien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgTroVe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check status room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thong_ke_bao_cao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoa_don.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
